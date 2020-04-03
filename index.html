@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>punchbag game</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+	
+	<div id="vue-app">
+			
+		<!-- bag image -->
+		<div id="bag" v-bind:class="{damaged:ended}"></div>
+
+
+		<!-- bag health -->
+		<div id="bag-health">
+			<div v-bind:style="{width:health + '%'}"></div>
+		</div>
+
+
+		<!-- bag control -->
+		<div id="controls">
+			<button @click="punch" v-show="!ended">Punch</button>
+			<button @click="restart">Restart</button>
+		</div>
+
+
+
+	</div>
+	
+
+	<script src="main.js"></script>
+</body>
+</html>
